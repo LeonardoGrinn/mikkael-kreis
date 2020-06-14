@@ -1,0 +1,279 @@
+// .gallery {
+//     &__container {
+//         display: grid;
+//         grid-template-columns: 3fr 1fr;
+//         grid-template-rows: 1fr;
+//         background-color: rgba($color-white, 0.7);
+//         height: 35vw;
+//         padding: 3rem;
+//         width: 80%;
+//         margin-left: 9vw;
+
+//         /* Portrait tablet */
+//         @include respond(tab-port) {
+//            grid-template-columns: 1fr;
+//            height: 48vw;
+//            margin-left: 10vw;
+//         }
+
+//         @include respond(phone) {
+//             margin-left: 0vw;
+//             width: 100%;
+//             height: 35vw;
+//             padding: 0;
+//             background-color: transparent;
+//         }
+//     }
+
+//     /* ============= G A L L E R Y  T H U M B N A I L ============= */
+
+//     &__thumbnail {
+//         display: grid;
+//         grid-template-columns: 1fr;
+//         overflow: auto;
+//         margin-left: 2.5vw;
+//         margin-top: 0%;
+//         height: 70%;
+
+//         /* Portrait tablet */
+//         @include respond(tab-port) {
+//             display: none;
+//         }
+//     }
+
+//     &__item {
+//         width: 95%;
+//         display: flex;
+//         justify-content: center;
+//         /* align horizontal */
+//         align-items: center;
+//         /* align vertical */
+//         transition: all 1s;
+
+//         img {
+//             width: 100%;
+//             height: auto;
+//             filter: grayscale(100%);
+//             transition: all ease 1s;
+//             margin-top: 2.5%;
+//             /* Quick fix to align thumnail & displayer */
+//             cursor: pointer;
+
+//             &:hover,
+//             &.active {
+//                 filter: grayscale(0%);
+//             }
+//         }
+//     }
+
+
+//     &__visor {
+//         display: flex;
+//         justify-content: center;
+//         /* align horizontal */
+//         align-items: center;
+//         /* align vertical */
+//         height: 70%;
+//     }
+// }
+
+// .visor--img {
+//     width: 100%;
+//     height: auto;
+//     /* Quick fix to align thumnail & displayer */
+//     cursor: pointer;
+
+//     /* Portrait tablet */
+
+//     @include respond(tab-port) {
+//         margin-top: 11%;
+//     }
+// }
+
+// .visor--mobile {
+//     @include respond(phone) {
+//         position: absolute;
+//         width: 100vw;
+//     }
+// }
+
+// .ui-icons {
+//     background-color: rgba($color-primary-dark, 0.5);
+//     transition: all 0.2s ease;
+//     cursor: pointer;
+
+//     @include respond(tab-port) {
+//        background-color: rgba($color-primary-dark, 1);
+//     }
+// }
+
+// .ui-icons:hover {
+//     background-color: rgba($color-primary-dark, 1);
+// }
+
+// .arrow {
+//     width: 2vw;
+//     padding: 0.5% 0;
+//     z-index: 10;
+
+//     &__next {
+//         transform: translateX(-100%);
+//     }
+
+//     &__preview {
+//         transform: translateX(100%);
+//     }
+
+//     @include respond(tab-port) {
+//         width: 4vw;
+
+//         &__next {
+//             transform: translate(100% ,80%);
+//         }
+
+//         &__preview {
+//             transform: translate(-100%, 80%);
+//         }
+//     }
+
+//     @include respond(phone) {
+//         width: 5.5vw;
+//         &__next {
+//             transform: translate(44.5vw, 150%);
+//         }
+
+//         &__preview {
+//             transform: translate(-45vw, 150%);
+//         }
+//     }
+// }
+
+// /* ============= F U L L  V I E W ============= */
+// .full {
+//     &__view {
+//         width: 100vw;
+//         height: 100vh;
+//         position: fixed;
+//         top: 0;
+//         left: 0;
+//         background-color: #000;
+//         display: none;
+//         z-index: 20; //margin-left: -11.1vw;
+//         transition: all 0.2s ease;
+
+//         /* Portrait tablet */
+//         @include respond(tab-port) {
+//             transform: rotate(-90deg);
+//             transform-origin: left top;
+//             width: 100vh;
+//             overflow-x: hidden;
+//             top: 100%;
+//             left: 0;
+//         }
+
+//         .visor--img {
+//             width: 80vw;
+//             height: auto;
+//             /* Portrait tablet */
+
+//             @include respond(tab-port) {
+//                 width: 85vh;
+//             }
+
+//             @include respond(phone) {
+//                 width: 140vw;
+//             }
+//         }
+
+//         .arrow__preview {
+//             margin-left: 3vw;
+
+//             @include respond(tab-port) {
+//                 margin-left: 4vh;
+//             }
+//         }
+
+//         .arrow__preview,
+//         .arrow__next {
+//             width: 3vw;
+//             transform: translate(0, 0);
+
+//             @include respond(tab-port) {
+//                 width: 3vh;
+//             }
+//         }
+
+//         .arrow__next:hover {
+//             transform: translateX(3px);
+
+//             @include respond(tab-port) {
+//                 transform: translateX(0px);
+//             }
+//         }
+
+//         .arrow__preview:hover {
+//             transform: translateX(-3px);
+
+//             @include respond(tab-port) {
+//                 transform: translateX(0px);
+//             }
+//         }
+
+//         .arrow {
+//             opacity: 0.5;
+//             transition: all 0.5s ease;
+
+//             @include respond(tab-port) {
+//                 opacity: 1;
+//                 margin-top: 8vw;
+//             }
+//         }
+
+//         .arrow:hover {
+//             opacity: 1;
+//         }
+
+//         .close {
+//             width: 2.5vw;
+//             position: absolute;
+//             top: 2.5vw;
+//             right: 2.5vw;
+//             opacity: 0.5;
+//             transition: all 0.3s ease;
+
+//             @include respond(tab-port) {
+//                 width: 2.5vh;
+//                 opacity: 1;
+//             }
+//         }
+
+//         .close:hover {
+//             opacity: 1;
+//             transform: rotate(90deg);
+            
+//             @include respond(tab-port) {
+//                 transform: rotate(0);
+//             }
+//         }
+//     }
+
+//     &__container {
+//         display: flex;
+//         align-self: center;
+//         align-items: center;
+//         max-width: 100vw;
+//         overflow: hidden;
+//         transition: all 0.3s ease;
+
+//         @include respond(tab-port) {
+//            max-width: 100vh;
+//            margin-top: -40%;
+//         }
+
+//         @include respond(phone) {
+//             margin-top: -90vw;
+//         }
+//     }
+// } 
+
+

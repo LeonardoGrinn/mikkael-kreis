@@ -1,0 +1,111 @@
+.arts {  
+    max-width: 100vw;
+    max-height: 100vh;
+    min-height: 96vh;
+
+    overflow-x: hidden;
+    border: 4px solid $color-primary;
+    margin: 2vh;
+    
+    &__container {
+       width: 100%;
+        height: 100%;
+        
+        
+        display: grid;
+        grid-template-rows: 6rem 1fr 40rem;
+        justify-items: center;
+        justify-self: center;
+    }
+
+    &__img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 4rem;
+        img {
+            width: 30vw;
+        }
+    }
+
+    &__box {
+        text-align: center;
+    }
+
+    &__details {
+        width: 100%;
+        text-align: center;
+        display: grid;
+        grid-template-rows: 4rem 1fr;
+        margin-top:10rem;
+    }
+
+    &__sections {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding-right: 15vw;
+        padding-left: 15vw;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        column-gap: 2rem;
+        
+        &-box {
+            &-img {
+                img {
+                    width: 100%;
+                }
+
+                opacity: 50%;
+                transition: all ease 0.3s;
+
+                &:hover {
+                    opacity: 100%;
+                }
+            }
+
+            &-text {
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+
+    &__section-title {
+        font-family: 'Aileron-regular', sans-serif;
+        text-transform: uppercase;
+        font-size: 5rem;
+        position: relative;
+        transform: translateY(-250%);
+        color: $color-secondary;
+        margin-bottom: -5rem;
+    }
+
+    &__social {
+        width: 100%;
+        display: grid;
+        justify-items: right;
+    }
+    &__sm {
+        width: 10%;
+
+        
+       
+        &-icons {
+            margin-top: 1rem;
+            margin-right: 1rem;
+            display: grid;
+            justify-items: center;
+            grid-template-columns: repeat(3, 1fr);
+
+            &-i {
+                width: 90%;
+            }
+        }
+    }
+
+    
+}
+
+
+

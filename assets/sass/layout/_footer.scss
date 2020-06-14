@@ -1,0 +1,16 @@
+.footer {
+  font-size: 1.3rem;
+  margin-top: 2%;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+  }
+
+  /* Portrait tablet */
+  @include respond(tab-port) {
+    margin-top: 1%;
+    margin-bottom: 4%;
+  }
+}
