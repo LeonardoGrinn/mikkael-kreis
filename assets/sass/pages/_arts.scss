@@ -79,6 +79,10 @@
         transform: translateY(-250%);
         color: $color-secondary;
         margin-bottom: -5rem;
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
     }
 
     &__social {

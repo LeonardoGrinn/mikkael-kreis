@@ -56,38 +56,3 @@ let changeVisorImg = e => {
     displayImg.querySelector('.visor--img').src = newImg; //Replace the image src for the new one.
 }
 
-/* Start Full View Gallery */
-let fullView = e => {
-    displayImg = document.querySelector('.full__container'); // Change to the full view visor displayer.
-    let newImg = e.target.src;
-    /* */
-    let fullViewImage = displayImg.querySelector('.visor--img'); //Select the index data of the current image.
-    fullViewImage.src = newImg; //Change the global value of the imageIndex.
-
-    document.querySelector('.full__view').style.display = 'grid';
-}
-
-/* Close Full View Gallery */
-let closeFullView = e => {
-    let imgDisplayer = displayImg.querySelector('.visor--img').src; //Locate the last value of the image full view displayer.
-    displayImg = document.querySelector('.gallery__visor'); //Restore the principal visor image displayer.
-    displayImg.querySelector('.visor--img').src = imgDisplayer; // Asign the last image full view displayer value.
-    document.querySelector('.full__view').style.display = 'none'; //Delete de full view element.
-}
-
-
-
-/* Change image onClick */
-for (let i = galleryImg.length - 1; i >= 0; i--) {
-    galleryImg[i].addEventListener('click', changeVisorImg);
-}
-/* */
-
-/* Call Arrow controller function */
-document.querySelectorAll('.arrow').forEach(e => {
-    e.addEventListener('click', arrowController);
-});
-
-/* Call Full View Gallery Controller */
-document.querySelector('.gallery__visor .visor--img').addEventListener('click', fullView);
-document.querySelector('.close').addEventListener('click', closeFullView); //Call close full view function. 

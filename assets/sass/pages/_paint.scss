@@ -1,0 +1,69 @@
+.paint {
+    max-width: 100vw;
+    max-height: 100vh;
+    min-height: 96vh;
+
+    overflow-x: hidden;
+    border: 4px solid $color-primary;
+    margin: 2vh;
+
+    &__container {
+        width: 100%;
+        height: 100%;
+
+
+        display: grid;
+        grid-template-rows: 6rem 1fr;
+        justify-items: center;
+        justify-self: center;
+    }
+
+    &__header {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__title {
+        margin-left: 2rem;
+        margin-top: 1rem;
+    }
+
+    &__details {
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 15rem;
+    }
+
+    &__description {
+        p {
+            padding: 4rem;
+            font-size: 2.2rem;
+        }
+    }
+
+    &__gallery {
+        overflow: hidden;
+        text-align: center;
+
+        &-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                width: 90%;
+            }
+        }
+
+        &-info {
+            p {
+                font-size: 2.2rem;
+                margin-top: 5rem;
+            }
+        }
+    }
+
+
+}
