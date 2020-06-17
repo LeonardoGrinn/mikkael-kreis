@@ -38,7 +38,9 @@
 
     &__description {
         p {
-            padding: 4rem;
+            padding-left: 4rem;
+            padding-right: 6vw;
+            margin-top: 10rem;
             font-size: 2.2rem;
         }
     }
@@ -51,16 +53,12 @@
             display: flex;
             align-items: center;
             justify-content: center;
-
-            img {
-                width: 90%;
-            }
         }
 
         &-info {
             p {
                 font-size: 2.2rem;
-                margin-top: 5rem;
+                //margin-top: 0rem;
             }
         }
     }
