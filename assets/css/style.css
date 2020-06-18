@@ -3226,6 +3226,25 @@ body {
 
     @if $breakpoint == big-desktop {
         @media only screen and (min-width: 112.5em) { @content };    //1800
+    }*/
+    /*@if $breakpoint == phone {
+        @media only screen and (max-width: 37.5em) { @content };    //600px
+    }
+
+    @if $breakpoint == tab-port {
+        @media only screen and (max-width: 56.25em) { @content };     //900px
+    }
+
+    @if $breakpoint == tab-land {
+        @media only screen and (max-width: 75em) { @content };    //1200px
+    }
+
+    @if $breakpoint == md-desktop {
+        @media only screen and (max-width: 85.3em) { @content };    //1200px
+    }
+
+    @if $breakpoint == big-desktop {
+        @media only screen and (min-width: 112.5em) { @content };    //1800
     }*/ }
     .product__btn img {
       width: 6rem;
@@ -3237,6 +3256,11 @@ body {
         left: 0;
         padding-right: 5rem;
         padding-top: 2rem; } }
+    @media only screen and (max-width: 31.25em) {
+      .product__btn img {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem; } }
   .product__gallery {
     overflow: hidden;
     text-align: center;

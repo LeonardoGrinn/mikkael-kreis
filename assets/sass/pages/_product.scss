@@ -130,6 +130,14 @@
             padding-right: 5rem;
             padding-top: 2rem;
         }
+
+        @include respond(iphone-plus) {
+            img {
+                position: fixed;
+                bottom: 2rem;
+                right: 2rem;
+            }
+        }
     }
 
     &__gallery {
