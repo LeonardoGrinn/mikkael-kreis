@@ -7,6 +7,11 @@
     border: 4px solid $color-primary;
     margin: 2vh;
 
+    @include respond(ipad) {
+        border: none;
+        margin: 0;
+    }
+
     &__container {
         width: 100%;
         height: 100%;
@@ -22,21 +27,51 @@
         width: 100%;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+
+        @include respond(ipad) {
+            grid-template-columns: 1fr;
+        }
     }
 
     &__title {
         margin-left: 2rem;
         margin-top: 1rem;
+
+        @include respond(ipad) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            margin-top: 8rem;
+            text-align: center;
+            margin-left: 0;
+        }
     }
 
     &__back {
         display: flex;
         justify-content: flex-end;
         margin-right: 5rem;
+        
         a {
             text-decoration: underline;
             color: $color-primary;
             font-size: 5rem;
+        }
+
+        @include respond(ipad) {
+            grid-column: col-start;
+            position: fixed;
+            left: 0rem;
+            top: 0rem;
+            padding-right: 2rem;
+            background-color: $color-secondary;
+            width: 100%;
+        }
+
+        @include respond(iphone-plus) {
+            right: 0rem;
+            top: 0.5rem;
         }
 
     }
@@ -46,6 +81,10 @@
         width: 100%;
         grid-template-columns: repeat(2, 1fr);
         margin-top: 15rem;
+
+        @include respond(ipad) {
+            grid-template-columns: 1fr;
+        }
     }
 
     &__description {
@@ -54,6 +93,18 @@
             padding-right: 6vw;
             margin-top: 10rem;
             font-size: 2.2rem;
+
+            @include respond(ipad) {
+                font-size: 3rem;
+                text-align: center;
+                padding-right: 5vw;
+                padding-left: 5vw;
+                margin-top: 5rem;
+            }
+
+            @include respond(iphone-plus) {
+                font-size: 2rem;
+            }
         }
     }
 
@@ -71,11 +122,27 @@
             width: 6rem;
             float: right;
         }
+
+        @include respond(ipad) {
+            background-color: $color-secondary;
+            width: 100%;
+            left: 0;
+            padding-right: 5rem;
+            padding-top: 2rem;
+        }
     }
 
     &__gallery {
         overflow: hidden;
         text-align: center;
+
+        @include respond(ipad) {
+            margin-top: 10rem;
+        }
+
+        @include respond(iphone-plus) {
+            margin-top: 5rem;
+        }
 
         &-box {
             display: flex;
@@ -87,6 +154,20 @@
             p {
                 font-size: 2.2rem;
                 //margin-top: 0rem;
+            }
+
+            @include respond(ipad) {
+                p {
+                    font-size: 3rem;
+                    //margin-top: 0rem;
+                }
+            }
+
+            @include respond(iphone-plus) {
+                p {
+                    font-size: 2rem;
+                    //margin-top: 0rem;
+                }
             }
         }
     }

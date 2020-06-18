@@ -6,6 +6,16 @@
     overflow: hidden;
     border: 4px solid $color-primary;
     margin: 2vh;
+
+    @include respond(ipad) {
+        overflow-y: hidden;
+        max-width: 100vw;
+        max-height: 90vh;
+        min-height: 90vh;
+
+        margin: 0;
+        border: none;
+    }
     
     &__container {
        width: 100%;
@@ -16,6 +26,11 @@
         grid-template-columns: 1fr 3fr 1fr;
         justify-items: center;
         justify-self: center;
+
+        @include respond(ipad) {
+            grid-template-columns: 1fr;
+            padding: 2vh;
+        }
     }
 
     &__img {
@@ -26,12 +41,34 @@
         img {
             width: 25vw;
         }
+
+        @include respond(ipad) {
+            img {
+                width: 50vw;
+            }    
+        }
     }
 
     &__text {
         text-align: center;
+        @include respond(ipad) {
+            font-size: 3rem;
+            padding-right: 5vw;
+            padding-left: 5vw;
+        }
+
+        @include respond(iphone-plus) {
+            font-size: 1.8rem;
+            padding-right: 5vw;
+            padding-left: 5vw;
+        }
     }
 }
 
+.empty {
+    @include respond(ipad) {
+        display: none; 
+    } 
+}
 
 
